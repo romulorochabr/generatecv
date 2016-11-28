@@ -1,5 +1,5 @@
-angular.module("main")
-	.controller("LoginController", function(loginService,$location){
+var app = angular.module("main");
+app.controller("LoginController", function(loginService,$location){
 	
 	var loginController = this;
 
@@ -12,7 +12,7 @@ angular.module("main")
 		loginController.msg = "Proccessing .... ";
 
 		var result = loginService.login(this.username, this.password)
-		.then(function (result) {
+		.then(function(result) {
 	      if(result){
 				console.log("Portal");
 				$location.path("/portal");
@@ -32,5 +32,6 @@ angular.module("main")
 	}
 
 
-
 });
+
+

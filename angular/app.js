@@ -17,6 +17,10 @@ app.config(function ($routeProvider, $httpProvider){
 		templateUrl: "./templates/genauthkey.htm",
 		controller: "GenAuthkeyController"
 	})
+    .when("/register",{
+        templateUrl: "./templates/register.htm",
+        controller: "RegisterController"
+    })
 	.otherwise({
 		templateUrl : "/templates/error404.htm"
 	});
